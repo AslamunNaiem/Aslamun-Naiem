@@ -1,13 +1,12 @@
-import 'dart:io';
+void main() {
+  List<int> a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
 
-void main() {    
-    stdout.write("Hi, please choose a number: ");
-    int number = int.parse(stdin.readLineSync()!);
-    
-    if (number % 2 == 0) {
-        print("Chosen number is even");
+  for (var i in a) {
+    if (i < 5) {
+      print(i);
     }
-    else {
-        print("Chosen number is odd");
-    }
+  }
+  
+  // One liner
+  print([for (var i in a) if (i < 5) i]);
 }
