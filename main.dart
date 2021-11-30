@@ -1,12 +1,11 @@
-void main() {
-  List<int> a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+import 'dart:io';
 
-  for (var i in a) {
-    if (i < 5) {
+void main() {
+  stdout.write("Please choose a number: ");
+  int number = int.parse(stdin.readLineSync()!);
+  for (var i = 1; i <= number; i++) {
+    if (number % i == 0) {
       print(i);
     }
   }
-  
-  // One liner
-  print([for (var i in a) if (i < 5) i]);
 }
